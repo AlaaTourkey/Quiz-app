@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- links -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>QuizZ</title>
+</head>
+
+<body>
+  <div class="container ">
+
+    <!-- setting page -->
+    <section id="setting" class="my-4">
+      <h1 class="text-center fs-1 fw-bolder text-uppercase">setting your quiz</h1>
+      <div class="form-group">
+        <label for="Category" class="fs-3 fw-bold my-3">Category</label>
+        <select id="Category" class="form-select" aria-label="Default select example">
+          <option value="18">Computer Science</option>
+          <option value="21">Sports</option>
+          <option value="22">Geography</option>
+          <option value="23">History</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="12">Entertainment: Music</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="Difficulty" class="fs-3 fw-bold my-3">Difficulty</label>
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="difficulty" id="easy" value="easy">
+          <label class="form-check-label" for="easy">
+            Easy
+          </label>
+        </div>
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="difficulty" id="medium" value="medium" checked>
+          <label class="form-check-label" for="medium">
+            Medium
+          </label>
+        </div>
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="difficulty" id="Default" value="Default">
+          <label class="form-check-label" for="Default">
+            Default
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group my-4">
+        <label class="fs-3 fw-bold my-2">Number Of Questions</label>
+        <input type="number" class="form-control " name="" id="numberOfQuestions" placeholder="number of questions">
+      </div>
+      <div id="alert1" class="alert alert-danger mt-2">Please Choose number of questions</div>
+
+
+      <div class="text-end">
+        <button id="startBtn" class=" btn  px-5 py-2 fs-5 rounded text-white my-3 ">Start</button>
+      </div>
+    </section>
+
+    <!-- quiz page -->
+    <section id="quiz">
+      <div class="my-5 py-5 ">
+        <h1 class="text-center mb-3 fs-1 fw-bolder text-uppercase">quiz</h1>
+
+        <!-- numbers -->
+        <span class="float-end bg-danger rounded text-white p-2">
+          <span id="currentQuestion"></span> of
+          <span id="totalQuestions"></span> Question
+        </span>
+
+        <!-- correct or inCorrect -->
+        <span id="inCorrect" class="btn btn-danger float-left">InCorrect</span>
+        <span id="Correct" class="btn btn-success float-left">Correct</span>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="">
+        <h4 class="d-inline">Q : </h4>
+        <h4 id="question" class="d-inline"></h4>
+        <div id="rowAnswer"></div>
+        <div id="alert" class="alert alert-danger mt-3">Please Choose Your Answer</div>
+        <button id="next" class="btn float-end py-2 px-4 text-white rounded my-4 ">submit</button>
+      </div>
+
+    </section>
+
+    <!-- finish page -->
+    <section id="finish" class="my-5 py-5">
+      <div class="py-4">
+        <h1 class="text-center fs-1 fw-bolder text-uppercase">finish</h1>
+        <div class="p-3 text-center">
+          <h5 class="text-warning">score</h5>
+          <h4 class="text-warning" id="score"></h4>
+        </div>
+        <button id="tryBtn" class="btn  float-end py-2 px-4 rounded text-white m-4">Againe?</button>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+body {
+  background-image: url(../photo-1513538318453-d0cc70acc86d.jpg);
+  object-fit: contain;
+  background-position: center;
+  height: 100%;
+  color: white !important;
+}
+
+#quiz,
+#finish,
+#Correct,
+#inCorrect {
+  display: none;
+}
+
+#finish,
+#next,
+#startBtn {
+  background-color: #143E51;
+}
+
+#tryBtn {
+  background-color: #006F7B;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+}
+
+.form-select,
+.form-control,
+.form-check {
+  background-color: #143E51 !important;
+  padding: 1rem 3rem !important;
+  color: white !important;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.alert {
+  display: none;
+}
+
+
