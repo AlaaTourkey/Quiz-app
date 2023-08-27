@@ -3,7 +3,6 @@ export class Quiz {
     this.questions = questions;
     this.currentQuestion = 0;
     this.score = 0
-    console.log(questions);
     document.getElementById('next').addEventListener('click', this.nextQuestion.bind(this))
     document.getElementById('tryBtn').addEventListener('click', this.tryAgain.bind(this))
     this.showQuestion();
@@ -37,9 +36,7 @@ export class Quiz {
     document.getElementById('question').innerHTML = this.questions[this.currentQuestion].question;
     let answers = [this.questions[this.currentQuestion].correct_answer, ...this.questions[this.currentQuestion].incorrect_answers];
 
-    console.log(answers);
     this.shuffle(answers);
-    console.log(answers);
 
     let answersRow = ''
     for (let i = 0; i < answers.length; i++) {
@@ -57,7 +54,8 @@ export class Quiz {
   }
 
   // show the next question
-  nextQuestion() {
+  nextQuestion(e) {
+    e.preventDefault();
     if (Array.from(document.getElementsByName('answer')).filter(el => el.checked).length != 0) {
       $('#alert').fadeOut(400);
       let userAnswer = Array.from(document.getElementsByName('answer')).filter(el => el.checked)[0].value;
@@ -76,8 +74,6 @@ export class Quiz {
     } else {
       $('#alert').fadeIn(400);
     }
-
-
   }
 
   // check the answer
@@ -97,5 +93,3 @@ export class Quiz {
     })
   }
 }
-
-

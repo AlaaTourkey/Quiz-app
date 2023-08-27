@@ -7,7 +7,8 @@ export class Settings {
     document.getElementById("startBtn").addEventListener("click", this.startQuiz.bind(this));
   }
 
-  async startQuiz() {
+  async startQuiz(e) {
+    e.preventDefault();
     let category = this.categoryElement.value;
     let difficulty = this.difficultyElement.filter(el => el.checked)[0].value
     let numOfQuestions = this.numberOfQuestionsElement.value

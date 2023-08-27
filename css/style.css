@@ -26,6 +26,7 @@ body {
 label {
   font-size: 18px;
   display: block;
+  width: 100%;
 }
 
 .form-select,
